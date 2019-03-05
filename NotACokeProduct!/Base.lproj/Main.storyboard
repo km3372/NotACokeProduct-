@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotACokeProduct_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-d8-lcw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peS-Sd-C0I">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Ezr-xt-4Iq">
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="cameraTapped:" destination="BYZ-38-t0r" id="qYJ-mT-K5p"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVY-Ry-z0d">
+                                <rect key="frame" x="20" y="523" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9fk-wP-q6s">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Coke image below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="aWH-xK-w7p">
+                                            <rect key="frame" x="8" y="8" width="319" height="64"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aWH-xK-w7p" secondAttribute="trailing" constant="8" id="3dl-7a-V1s"/>
+                                        <constraint firstAttribute="bottom" secondItem="aWH-xK-w7p" secondAttribute="bottom" constant="8" id="F0H-zu-y3R"/>
+                                        <constraint firstItem="aWH-xK-w7p" firstAttribute="leading" secondItem="9fk-wP-q6s" secondAttribute="leading" constant="8" id="tdZ-jO-vic"/>
+                                        <constraint firstItem="aWH-xK-w7p" firstAttribute="top" secondItem="9fk-wP-q6s" secondAttribute="top" constant="8" id="xdF-f9-aeK"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="sYf-cP-piZ"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kVY-Ry-z0d" secondAttribute="trailing" constant="20" id="D2t-xN-4Fa"/>
+                            <constraint firstItem="peS-Sd-C0I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fd6-RD-zkd"/>
+                            <constraint firstItem="R6s-d8-lcw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H98-3t-Q2r"/>
+                            <constraint firstItem="peS-Sd-C0I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IIc-MQ-KFS"/>
+                            <constraint firstItem="peS-Sd-C0I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NtC-Vf-5Kq"/>
+                            <constraint firstItem="peS-Sd-C0I" firstAttribute="top" secondItem="kVY-Ry-z0d" secondAttribute="bottom" constant="20" id="O0L-s8-QZV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R6s-d8-lcw" secondAttribute="bottom" id="RwM-p3-mtP"/>
+                            <constraint firstItem="kVY-Ry-z0d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UsZ-Kr-7fC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R6s-d8-lcw" secondAttribute="trailing" id="VMb-R3-o8p"/>
+                            <constraint firstItem="R6s-d8-lcw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vxf-s8-ond"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="aWH-xK-w7p" id="T74-vo-yT7"/>
+                        <outlet property="imageView" destination="R6s-d8-lcw" id="nTO-27-QSJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

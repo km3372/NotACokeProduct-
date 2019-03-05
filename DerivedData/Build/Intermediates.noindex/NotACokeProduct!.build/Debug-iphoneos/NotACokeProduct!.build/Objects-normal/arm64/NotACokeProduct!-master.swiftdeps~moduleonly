@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "1ad97c8aaa6747ce8dada7dbf3bafb80"
+build_time: [1551116443, 199835000]
+inputs:
+  "/Users/kennethmoody/Desktop/iOS projects/NotACokeProduct!/NotACokeProduct!/ViewController.swift": [1551115910, 0]
+  "/Users/kennethmoody/Desktop/iOS projects/NotACokeProduct!/NotACokeProduct!/AppDelegate.swift": [1550980826, 0]
+  "/Users/kennethmoody/Desktop/iOS projects/NotACokeProduct!/DerivedData/Build/Intermediates.noindex/NotACokeProduct!.build/Debug-iphoneos/NotACokeProduct!.build/DerivedSources/CoreMLGenerated/CokeClassifier/CokeClassifier.swift": [1551116443, 0]
